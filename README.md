@@ -23,12 +23,12 @@ Cet projet a été fait avec html, css, javascript.
 Site web [ici](https://alecinfo.github.io/Terminal/)
 1. Entrer la commande `help` pour commencer et voir les différents comamndes disponible
 2. Commande:
-> - help......Permet d'afficher la liste de toutes les commandes
-> - about.....Affiche une desciption de moi
-> - cd........Est purement visuel et permet de simuler un chemin
-> - clear.....Efface l'historique des commandes pour partir de plus belle
-> - projects..Affiche les projets que j'ai pu faire
-> - social....Affiche les réseaux sociaux tel que le github
+  - help......Permet d'afficher la liste de toutes les commandes
+  - about.....Affiche une desciption de moi
+  - cd........Est purement visuel et permet de simuler un chemin
+  - clear.....Efface l'historique des commandes pour partir de plus belle
+  - projects..Affiche les projets que j'ai pu faire
+  - social....Affiche les réseaux sociaux tel que le github
 3. Et ensuite amusez vous bien
 
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
