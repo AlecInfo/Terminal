@@ -6,25 +6,30 @@
 
 ## Description
 
-L’art ASCII consiste à réaliser des images uniquement à l'aide des lettres et caractères spéciaux contenus dans le code ASCII.
+Le terminal a pour but de faire un portfolio. 
+Avec les multiple commande disponible dans le terminal tel que `about`, vous permetterons d'avoir des informations sur moi.
+Pour le moment le projet est encore en progretion.
 
-L'American Standard Code for Information Interchange (Code américain normalisé pour l'échange d'information), plus connu sous l'acronyme ASCII (/as.ki/, Écouter), est une norme informatique de codage de caractères apparue dans les années 1960.
-
-Cet algorithme est conçu en Javascript.
+Cet projet a été fait avec html, css, javascript.
 
 ## Fonctionnement
 
-1. Récupérer une image dans les fichiers
-2. La convertir en couleurs girses
-3. Changer chaque pixel par un caractère donné en fonction de la valeur du niveaux de gris
-4. Afficher l'image modifier
+1. Récuperer l'input une fois **Enter** pressé 
+2. Traiter la commande
+3. Ajouter a l'historique les infos
 
 ## Expérimenter
 
-Site web [ici](https://alecinfo.github.io/AsciiArt/)
-1. Cliquer sur le bouton pour choisir une image
-2. L'image sélectionnée sera convertie en Ascii
-3. Pour recommencer le processus appuyer sur actualiser la page, F5 ou appuyer sur le bouton refresh
+Site web [ici](https://alecinfo.github.io/Terminal/)
+1. Entrer la commande `help` pour commencer et voir les différents comamndes disponible
+2. Commande:
+  - help...........Permet d'afficher la liste de toutes les commandes
+  - about..........Affiche une desciption de moi
+  - cd.............Est purement visuel et permet de simuler un chemin
+  - clear..........Efface l'historique des commandes pour partir de plus belle
+  - projects.......Affiche les projets que j'ai pu faire
+  - social.........Affiche les réseaux sociaux tel que le github
+3. Et ensuite amusez vous bien
 
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
 
