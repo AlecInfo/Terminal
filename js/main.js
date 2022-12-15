@@ -10,17 +10,14 @@ $(function() {
 
         if (e.keyCode == 13) {
             // add the command in the history
-            $('#history').append(
-                `<span class="terminal__line--user">${$('#current_User').text()}</span>` + 
-                `<span class="terminal__line--location">${$('#currentLocation').text()}</span>` + 
-                `<span class="terminal__line--bling">${$('#currentBling').text()}</span>` + 
-                $(this).val() + 
-                '<br/>'
-                );
+            write($(this).val(), true);
+            
+            commands($(this).val())
 
             // change the path with the cd command
             if ($(this).val().substring(0, 3) === 'cd ') {
                 $('#currentLocation').html($(this).val().substring(3).trim());
+                write(cd + $('#currentLocation').text());
             }
 
             // direcly scoll to bottom
@@ -33,3 +30,49 @@ $(function() {
         }
     });
 });
+
+function write(text, isNewLine) {
+    if (isNewLine) {
+        $('#history').append(
+            `<span class="terminal__line--user">${$('#current_User').text()}</span>` + 
+            `<span class="terminal__line--location">${$('#currentLocation').text()}</span>` + 
+            `<span class="terminal__line--bling">${$('#currentBling').text()}</span>` + 
+            text + 
+            '<br/>'
+            );
+    }else{
+        if (typeof(text) === 'string') {
+            $('#history').append(
+                text + 
+                ' <br>'
+            );
+        }else{
+            text.forEach(element => {
+                $('#history').append(
+                    element + 
+                    ' <br>'
+                );
+            });
+        }        
+    }
+}
+
+function commands(cmd) {
+    switch (cmd) {
+        case 'help':
+            write(help);
+            break;
+
+        case 'about':
+            write(about);
+            break;
+
+        case 'help2':
+            
+            break;
+            
+        case 'help3':
+            
+            break;
+    }
+}
