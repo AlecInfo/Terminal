@@ -20,12 +20,12 @@ $(function() {
                 write(cd + $('#currentLocation').text());
             }
 
+            // clear the input
+            $('#input').val('');
+
             // direcly scoll to bottom
             var out = document.getElementById("terminal__body");
             out.scrollTop = out.scrollHeight - out.clientHeight;
-
-            // clear the input
-            $('#input').val('');
 
         }
     });
@@ -67,8 +67,8 @@ function commands(cmd) {
             write(about);
             break;
 
-        case 'help2':
-            
+        case 'clear':
+            window.location.reload();
             break;
             
         case 'help3':
