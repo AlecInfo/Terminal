@@ -1,191 +1,115 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 
-:root {
-	--color: white;
-	--bg: rgb(151, 151, 151);
-	--off: #050505;
-	--dark: #111;
-	--term: "> ";
-}
-
-/*********** GENERIC STUFF *************/
-html {
-	font-size: 12px;
-	box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
-}
-
-body {
-	background: white;
-	margin: 0;
-	overflow: hidden;
-	font-family: sans-serif;
-    color: var(--color);
-}
-
-a {
-	outline: none;
-}
-
-/*********** PARTS OF THE SCREEN *************/
-#monitor {
-	margin: 3vmin auto;
-	padding: 5.5vmin;
-	width: min-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #1c1c1c;
-	border-radius: 0.5rem;
-}
-
-#monitor:not(.off) {
-	box-shadow: 0.6px 90px 110px -60px var(--bg); /* screen glow */
-}
-#screen {
-	position: relative;
-	border: 30px solid transparent;
-	border-image-source: url(/img/bezel_gray.png);
-	border-image-slice: 30 fill;
-	border-image-outset: 0;
-	overflow: hidden;
-}
-/* The screen itself + border */
-#crt,
-pre {
-	font-family: "VT323", monospace;
-}
-#crt {
-	min-width: 80ch; /* This makes 80 monospace characters fit on the screen */
-	height: calc(80ch * 0.8);
-	font-size: max(
-		1rem,
-		2.2vmin
-	); /* Scale the font-size relative to the minimum screen dimension */
-	position: relative;
-	background: var(--bg);
-	background-image: radial-gradient(
-		ellipse,
-		var(--bg) 0%,
-		var(--off) 90%
-	);
-	animation: on 2s linear;
-	transition: all 0.5s;
-	overflow: hidden;
-}
-
-#crt:after {
-	content: " ";
-	opacity: 0;
-	background: #fff;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	z-index: 3;
-}
-#monitor.turn-off #crt:after {
-	animation: turnOff 0.4s ease-in-out;
-	/* animation-fill-mode: forwards; */
-}
-
-#monitor:not(.off) #crt:before {
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: linear-gradient(
-		to bottom,
-		rgba(18, 16, 16, 0.1) 50%,
-		rgba(0, 0, 0, 0.25) 50% 
-	);  
-	background-size: 100% 8px;
-	z-index: 2;
-	pointer-events: none;
-	animation: fadeIn 2s;
-}
-
-/* Screen turned off */
-#monitor.off #crt {
-	background: var(--off);
-}
-#monitor.off #crt:before {
-	background: none;
-}
-#monitor.off #crt * {
-	display: none !important;
-}
-
-body.fullscreen #crt {
-	font-size: 2.5rem;
-	position: fixed;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 999;
-}
-
-.fullscreen {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-.terminal {
-	position: relative;
-	height: 100%;
-	padding: 2rem;
-	overflow-y: auto;
-	overflow-x: hidden;
-	word-break: break-word;
-	text-transform: uppercase;
-	animation: textShadow 4s infinite;
-}
-
-.terminal,
-.fullscreen {
-	color: var(--color);
-	text-shadow: 0 0 5px #c8c8c8;
-}
-
-::selection {
-	background: var(--color);
-	color: var(--bg);
-	text-shadow: none;
-}
-
-/* Scanline moving top to bottom over the screen */
-.scanline {
-	width: 100%;
-	height: 100px;
-	z-index: 8;
-	background: linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(255, 255, 255, 0.2) 10%,
-		rgba(0, 0, 0, 0.1) 100%
-	);
-	opacity: 0.1;
-	position: absolute;
-	bottom: 100%;
-	pointer-events: none;
-	animation: scanline 10s linear infinite;
-}
-
+body {  
+    background: rgb(151, 151, 151); 
+    font-family: VT323;
+    margin: 0%;
+  } 
+  #container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;
+  } 
+  #terminal {  
+    width: 90vw;  
+    height: 80vh;  
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+  } 
+  #terminal__bar {  
+    display: flex;  
+    width: 100%;  
+    height: 30px;  
+    align-items: center;  
+    padding: 0 8px;  
+    box-sizing: border-box;  
+    border-top-left-radius: 5px;  
+    border-top-right-radius: 5px;  
+    background: linear-gradient(#504b45 0%,#3c3b37 100%);
+  } 
+  #bar__buttons {  
+    display: flex;  
+    align-items: center;
+  } 
+  .bar__button {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    padding: 0;  
+    margin-right: 5px;  
+    font-size: 8px;  
+    height: 12px;  
+    width: 12px;  
+    box-sizing: border-box;  
+    border: none;  
+    border-radius: 100%;  
+    background: linear-gradient(#7d7871 0%, #595953 100%);  
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.2);  
+    box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+  }
+  .bar__button:hover {  
+    cursor: pointer;
+  }
+  .bar__button:focus {  
+    outline: none;
+  }
+  #bar__button--exit {  
+    background: linear-gradient(#f37458 0%, #de4c12 100%);    
+    background-clip: padding-box;
+  } 
+  #bar__user {   
+    color: #d5d0ce;  
+    margin-left: 6px;  
+    font-size: 18px;  
+    line-height: 15px;
+  } 
+  #terminal__body {  
+    background: #383838;  
+    height: calc(100% - 30px);  
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;  
+    margin-top: -1px;
+    font-size: 25px;
+  } 
+  #terminal__prompt {  
+    display: flex;
+  }
+  #terminal__prompt--user {  
+    color: #7eda28;
+  }
+  #terminal__prompt--location { 
+    color: #4878c0;
+  }
+  #terminal__prompt--bling {  
+    color: #dddddd;
+  }
+  #target{
+      font-size: 25px;
+      background-color: transparent;
+      color: white;
+  }
+  #terminal__prompt--cursor {  
+    display: block;  
+    height: 20px;  
+    width: 10px;  
+    margin-left: 9px; 
+    margin-top: 3px; 
+    animation: blink 1200ms linear infinite;
+  } 
+  @keyframes blink {  
+    0% {    
+      background: #ffffff;  
+    }  
+    49% {    
+      background: #ffffff;  
+    }  
+    60% {    
+      background: transparent;  
+    }  
+    99% {    
+      background: transparent;  
+    }  100% {    
+      background: #ffffff;  
+    }
+  } 
