@@ -20,7 +20,7 @@ $(function() {
 
             // change the path with the cd command
             if ($(this).val().substring(0, 3) === 'cd ') {
-                $('#currentLocation').html($(this).val().substring(3));
+                $('#currentLocation').html($(this).val().substring(3).trim());
             }
 
             // direcly scoll to bottom
