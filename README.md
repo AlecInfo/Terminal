@@ -2,7 +2,7 @@
 
 <h1> Web Terminal </h1>
 
-![ex image](https://i.pinimg.com/originals/bc/e5/5a/bce55aa451f59852ed2d76217b087ddc.png)
+![ex image](https://github.com/AlecInfo/Terminal/blob/main/screen.png)
 
 ## Description
 
