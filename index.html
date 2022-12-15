@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="css/animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,18 +28,37 @@
           <div id="effect"></div>
 
           <!-- Terminal Body -->        
-          <section id="terminal__body">          
-            <div id="terminal__prompt">            
-              <span id="terminal__prompt--user">Alec@terminal:</span>            
-              <span id="terminal__prompt--location">~</span>            
-              <span id="terminal__prompt--bling">$</span>   
-              <input id="target" type="text">         
-              <span id="terminal__prompt--cursor"></span>          
-            </div>        
-          </section>      
-        </div>    
-      </main>
+          <section id="terminal__body">  
+            <div id="history">
+                <pre id="banner"> 
+   ______  __   ______  ______  ______  ______       ______   __       ______   ______      
+  /\  == \/\ \ /\  ___\/\__  _\/\__  _\/\  ___\     /\  __ \ /\ \     /\  ___\ /\  ___\     
+  \ \  _-/\ \ \\ \  __\\/_/\ \/\/_/\ \/\ \  __\     \ \  __ \\ \ \____\ \  __\ \ \ \____    
+   \ \_\   \ \_\\ \_____\ \ \_\   \ \_\ \ \_____\    \ \_\ \_\\ \_____\\ \_____\\ \_____\   
+    \/_/    \/_/ \/_____/  \/_/    \/_/  \/_____/     \/_/\/_/ \/_____/ \/_____/ \/_____/   
+                                                                                                          
+   ______  ______   ______   __    __   __   __   __   ______   __                          
+  /\__  _\/\  ___\ /\  == \ /\ "-./  \ /\ \ /\ "-.\ \ /\  __ \ /\ \                         
+  \/_/\ \/\ \  __\ \ \  __< \ \ \-./\ \\ \ \\ \ \-.  \\ \  __ \\ \ \____                    
+     \ \_\ \ \_____\\ \_\ \_\\ \_\ \ \_\\ \_\\ \_\\"\_\\ \_\ \_\\ \_____\                   
+      \/_/  \/_____/ \/_/ /_/ \/_/  \/_/ \/_/ \/_/ \/_/ \/_/\/_/ \/_____/</pre>
 
+            </div>        
+            <div id="terminal__line">            
+              <span id="current_User" class="terminal__line--user">Alec@terminal:</span>            
+              <span id="currentLocation" class="terminal__line--location">~</span>            
+              <span id="currentBling" class="terminal__line--bling">$</span>  
+              <div id="terminal__line--command">
+                <span id="command"></span>
+                <span id="terminal__line--cursor"></span>          
+              </div>
+              <input type="text" id="input" value="" autofocus>   
+            </div>    
+          </section> 
+          
+        </div>
+      </main>
+      
     <script src="js/main.js"></script>
 </body>
 

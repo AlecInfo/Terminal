@@ -71,32 +71,55 @@ body {
     padding-right: 2px;  
     margin-top: -1px;
     font-size: 25px;
+    overflow-y: auto;
+    max-height: calc(100% - 30px); 
   } 
-  #terminal__prompt {  
+  #history{
+    color: white;
+    /* overflow-y: auto;
+    max-height: calc(100% - 30px);  */
+  }
+  #history #banner{
+    font-size: 11px;
+    font-family: Courier;
+  }
+  #terminal__line {  
     display: flex;
   }
-  #terminal__prompt--user {  
+  .terminal__line--user {  
     color: #7eda28;
   }
-  #terminal__prompt--location { 
+  .terminal__line--location { 
     color: #4878c0;
   }
-  #terminal__prompt--bling {  
+  .terminal__line--bling {  
     color: #dddddd;
   }
-  #target{
-      font-size: 25px;
-      background-color: transparent;
-      color: white;
+  #terminal__line--command {
+    font-family: VT323;
+    font-size: 25px;
+    background: transparent;
+    color: white;
+    overflow: hidden;
   }
-  #terminal__prompt--cursor {  
-    display: block;  
-    height: 20px;  
-    width: 10px;  
+  #terminal__line--command span {
+    float: left;
+    padding-left: 3px;
+    white-space: pre;
+  }
+  #terminal__line--cursor {  
+    float: left;
+    height: 18px;  
+    width: 8px; 
     margin-left: 9px; 
     margin-top: 3px; 
     animation: blink 1200ms linear infinite;
   } 
+  #input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
   @keyframes blink {  
     0% {    
       background: #ffffff;  

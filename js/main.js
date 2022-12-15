@@ -1,11 +1,35 @@
-var text = "";
+$(function() {
+    $('#terminal').on('click', function() {
+        $('#input').focus();
+    });
 
-const input = document.getElementById('target');
+    $('#input').on('keydown', function search(e) {
 
-input.addEventListener('keypress', logKey);
+        // display the command
+        $('#command').text($(this).val());
 
-function logKey(e) {
-    text += ` ${e.code}`;
+        if (e.keyCode == 13) {
+            // add the command in the history
+            $('#history').append(
+                `<span class="terminal__line--user">${$('#current_User').text()}</span>` + 
+                `<span class="terminal__line--location">${$('#currentLocation').text()}</span>` + 
+                `<span class="terminal__line--bling">${$('#currentBling').text()}</span>` + 
+                $(this).val() + 
+                '<br/>'
+                );
 
-    alert(text);
-}
+            // change the path with the cd command
+            if ($(this).val().substring(0, 3) === 'cd ') {
+                $('#currentLocation').html($(this).val().substring(3));
+            }
+
+            // direcly scoll to bottom
+            var out = document.getElementById("terminal__body");
+            out.scrollTop = out.scrollHeight - out.clientHeight;
+
+            // clear the input
+            $('#input').val('');
+
+        }
+    });
+});
