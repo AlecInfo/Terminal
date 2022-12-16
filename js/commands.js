@@ -1,6 +1,6 @@
 help = [
     'about...............Who is Piette Alec',
-    'cd..................Change path (visual)',
+    'cd (path)...........Change path (visual)',
     'clear...............Clear the terminal',
     '(WP) projects.......View coding projects',
     'repo................Go see the code',
