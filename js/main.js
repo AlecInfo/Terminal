@@ -43,12 +43,14 @@ function write(text, isNewLine) {
     }else{
         if (typeof(text) === 'string') {
             $('#history').append(
+                '&emsp;&emsp;' +
                 text + 
                 ' <br>'
             );
         }else{
             text.forEach(element => {
                 $('#history').append(
+                    '&emsp;&emsp;' +
                     element + 
                     ' <br>'
                 );
@@ -70,9 +72,10 @@ function commands(cmd) {
         case 'clear':
             window.location.reload();
             break;
-            
-        case 'help3':
-            
+
+        case 'repo':
+            window.open("https://github.com/AlecInfo/Terminal");
             break;
+
     }
 }

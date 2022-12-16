@@ -1,8 +1,9 @@
 help = [
-    'about..........Who is Piette Alec',
-    'cd.............Change path (visual)',
-    'clear..........Clear the terminal',
+    'about...............Who is Piette Alec',
+    'cd..................Change path (visual)',
+    'clear...............Clear the terminal',
     '(WP) projects.......View coding projects',
+    'repo................Go see the code',
     '(WP) social.........Display social networks',
 ];
 

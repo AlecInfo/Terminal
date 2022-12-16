@@ -2,7 +2,7 @@
 
 body {  
     background: rgb(151, 151, 151); 
-    font-family: VT323;
+    font-family: monospace;
     margin: 0%;
   } 
   #container {  
@@ -60,6 +60,7 @@ body {
   #bar__user {   
     color: #d5d0ce;  
     margin-left: 6px;  
+    font-family: VT323;
     font-size: 18px;  
     line-height: 15px;
   } 
@@ -70,18 +71,15 @@ body {
     padding-left: 2px;
     padding-right: 2px;  
     margin-top: -1px;
-    font-size: 25px;
+    font-size: 17px;
     overflow-y: auto;
     max-height: calc(100% - 30px); 
   } 
   #history{
     color: white;
-    /* overflow-y: auto;
-    max-height: calc(100% - 30px);  */
   }
   #history #banner{
-    font-size: 11px;
-    font-family: Courier;
+    color: #f8d568;
   }
   #terminal__line {  
     display: flex;
@@ -96,15 +94,12 @@ body {
     color: #dddddd;
   }
   #terminal__line--command {
-    font-family: VT323;
-    font-size: 25px;
     background: transparent;
     color: white;
     overflow: hidden;
   }
   #terminal__line--command span {
     float: left;
-    padding-left: 3px;
     white-space: pre;
   }
   #terminal__line--cursor {  
