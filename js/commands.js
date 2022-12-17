@@ -1,17 +1,45 @@
-help = [
-    'about...............Who is Piette Alec',
-    'cd (path)...........Change path (visual)',
-    'clear...............Clear the terminal',
-    '(WP) projects.......View coding projects',
-    'repo................Go see the code',
-    '(WP) social.........Display social networks',
-];
+function help() {
+    text = [
+        'about...............Who is Piette Alec',
+        'cd (path)...........Change path just visual',
+        'clear...............Clear the terminal',
+        'help................Displays the list of commands',
+        // '(WP) projects.......View coding projects',
+        'repo................Go see the code',
+        // '(WP) social.........Display social networks',
+    ];
 
-about = [
-    'my name is alec piette and i am 19 years old.',
-    'I am currently studying to obtain a CFC in computer science.',
-];
+    write(text);
+}
 
-cd = [
-    'moved to: '
-];
+
+function about() {
+    text = [
+        'My name is Alec Piette and i am 19 years old.',
+        'I am currently in the last year of training as an application developer at the IT professional training center (CFPTi) in Geneva.',
+        'I practice application development with C# mainly, but also websites with HTML, CSS, PHP, Javascript.',
+        'During my training I had the opportunity to touch all areas of IT from infrastructure to network through development.',
+        'But what I\'m most comfortable with is code.'
+    ];
+
+    write(text);
+}
+
+function cd(param) {
+    var location = param.substring(3).trim();
+
+    text = [
+        'moved to: ' + location
+    ];
+    
+    $('#currentLocation').html(location);
+    write(text);
+}
+
+function clear(){
+    window.location.reload();
+}
+
+function repo() {
+    window.open("https://github.com/AlecInfo/Terminal");
+}

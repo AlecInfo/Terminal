@@ -102,11 +102,11 @@ body {
     float: left;
     white-space: pre;
   }
-  #terminal__line--cursor {  
+  #terminal__line--cursor {   
     float: left;
-    height: 18px;  
+    height: 16px;  
     width: 8px; 
-    margin-left: 9px; 
+    margin-left: 3px; 
     margin-top: 3px; 
     animation: blink 1200ms linear infinite;
   } 
