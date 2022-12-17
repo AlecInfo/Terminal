@@ -47,9 +47,9 @@ function repo() {
 function social(){
     text = [
         'My social networks:',
+        'Email........<a onclick="sendMail()">alecpiettepro@gmail.com</a>',
         'Github.......<a href="https://github.com/AlecInfo">https://github.com/AlecInfo</a>',
         'Twitter......<a href="https://twitter.com/p_alec_p">https://twitter.com/p_alec_p</a>',
-        'Email........<a onclick="sendMail()">alecpiettepro@gmail.com</a>',
     ];
 
     write(text);
