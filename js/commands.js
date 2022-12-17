@@ -6,7 +6,7 @@ function help() {
         'help................Displays the list of commands',
         // '(WP) projects.......View coding projects',
         'repo................Go see the code',
-        // '(WP) social.........Display social networks',
+        'social..............Display social networks',
     ];
 
     write(text);
@@ -42,4 +42,19 @@ function clear(){
 
 function repo() {
     window.open("https://github.com/AlecInfo/Terminal");
+}
+
+function social(){
+    text = [
+        'My social networks:',
+        'Github.......<a href="https://github.com/AlecInfo">https://github.com/AlecInfo</a>',
+        'Twitter......<a href="https://twitter.com/p_alec_p">https://twitter.com/p_alec_p</a>',
+        'Email........<a onclick="sendMail()">alecpiettepro@gmail.com</a>',
+    ];
+
+    write(text);
+}
+
+function sendMail() {
+    window.open('https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVhQxQQWVgjTpKtWzVrZgkgKDcwTWKjHSXlkpcglXwqLPRnQkrsZdttSzVbNPQChLjFg');
 }

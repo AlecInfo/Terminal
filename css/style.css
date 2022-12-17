@@ -85,10 +85,10 @@ body {
     display: flex;
   }
   .terminal__line--user {  
-    color: #7eda28;
+    color: #81F797;
   }
   .terminal__line--location { 
-    color: #4878c0;
+    color: #6882F7;
   }
   .terminal__line--bling {  
     color: #dddddd;
@@ -110,6 +110,9 @@ body {
     margin-top: 3px; 
     animation: blink 1200ms linear infinite;
   } 
+  a {
+    color: #81D4F7;
+  }
   #input{
     width: 0;
     height: 0;
