@@ -12,7 +12,7 @@ $(function() {
             // add the command in the history
             write($(this).val(), true);
             // apply the command 
-            commands($(this).val())
+            commands($(this).val().toLowerCase());
 
             // clear the input
             $('input').val('');
