@@ -4,6 +4,8 @@
 
 ![ex image](https://github.com/AlecInfo/Terminal/blob/main/screen.png)
 
+Site web [ici](https://alecinfo.github.io/Terminal/)
+
 ## Description
 
 Le terminal a pour but de faire un portfolio. 
@@ -20,7 +22,6 @@ Cet projet a été fait avec html, css, javascript.
 
 ## Expérimenter
 
-Site web [ici](https://alecinfo.github.io/Terminal/)
 1. Entrer la commande `help` pour commencer et voir les différents comamndes disponible
 2. Et ensuite amusez vous bien
 
