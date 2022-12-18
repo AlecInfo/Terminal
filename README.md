@@ -8,8 +8,13 @@ Site web [ici](https://alecinfo.github.io/Terminal/)
 
 ## Description
 
-Le terminal a pour but de faire un portfolio. 
+Le terminal a pour but de faire un portfolio.
+
 Avec les multiple commande disponible dans le terminal tel que `about`, vous permetterons d'avoir des informations sur moi.
+Ce portfolio a le design d'un termial, en informatique, un terminal est une variété de périphérique réseau placé à l'extrémité d'un nœud. Le terminal est un point d’accès de communication entre l'homme et un ordinateur central ou un réseau d'ordinateurs. Dans un réseau décentralisé de type client-serveur il correspond aujourd'hui à l'association minimale d'un périphérique de saisie (clavier) ou de pointage (souris) et d'un moniteur reliés à l'unité centrale.
+
+Sous Unix et en génie logiciel, il désigne par abus de langage une fenêtre d'invite de commande donnant accès à un shell Unix.
+
 Pour le moment le projet est encore en progretion.
 
 Cet projet a été fait avec html, css, javascript.
