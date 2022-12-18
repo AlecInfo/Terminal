@@ -1,13 +1,25 @@
 function help() {
     text = [
         'about...............Who is Piette Alec',
-        'cd (path)...........Change path just visual',
         'clear...............Clear the terminal',
         'help................Displays the list of commands',
-        // '(WP) projects.......View coding projects',
         'repo................Go see the code',
         'social..............Display social networks',
     ];
+
+    write(text);
+}
+
+function help_all(){
+    text = [
+        'about...............Who is Piette Alec',
+        'cd (path)...........Change path just visual',
+        'clear...............Clear the terminal',
+        'help................Displays the list of commands',
+        'help -a.............Displays the all list of commands',
+        'repo................Go see the code',
+        'social..............Display social networks',
+    ]
 
     write(text);
 }

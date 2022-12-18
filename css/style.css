@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 
+:root{
+  --bg: rgb(151, 151, 151);
+  --termial-bg: #383838;
+  --primary: #ffffff;
+  --secondary: #f8d568;
+  --user: #81F797;
+  --location: #6882F7;
+  --link: #81D4F7;
+}
+
+
 body {  
-    background: rgb(151, 151, 151); 
+    background: var(--bg); 
     font-family: monospace;
     margin: 0%;
   } 
@@ -65,7 +76,7 @@ body {
     line-height: 15px;
   } 
   #terminal__body {  
-    background: #383838;  
+    background: var(--termial-bg);  
     height: calc(100% - 30px);  
     padding-top: 2px;
     padding-left: 2px;
@@ -76,26 +87,27 @@ body {
     max-height: calc(100% - 30px); 
   } 
   #history{
-    color: white;
+    color: var(--primary);
   }
   #history #banner{
-    color: #f8d568;
+    color: var(--secondary);
   }
   #terminal__line {  
     display: flex;
   }
   .terminal__line--user {  
-    color: #81F797;
+    color: var(--user);
   }
   .terminal__line--location { 
-    color: #6882F7;
+    color: var(--location);
   }
   .terminal__line--bling {  
-    color: #dddddd;
+    color: var(--primary);
+    margin-right: 6px;
   }
   #terminal__line--command {
     background: transparent;
-    color: white;
+    color: var(--primary);
     overflow: hidden;
   }
   #terminal__line--command span {
@@ -111,7 +123,7 @@ body {
     animation: blink 1200ms linear infinite;
   } 
   a {
-    color: #81D4F7;
+    color: var(--link);
   }
   #input{
     width: 0;
@@ -120,10 +132,10 @@ body {
   }
   @keyframes blink {  
     0% {    
-      background: #ffffff;  
+      background: var(--primary);  
     }  
     49% {    
-      background: #ffffff;  
+      background: var(--primary);  
     }  
     60% {    
       background: transparent;  
@@ -131,6 +143,6 @@ body {
     99% {    
       background: transparent;  
     }  100% {    
-      background: #ffffff;  
+      background: var(--primary);  
     }
   } 

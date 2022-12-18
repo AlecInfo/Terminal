@@ -31,6 +31,10 @@ function commands(cmd) {
         case 'help':
             help();
             break;
+        
+        case 'help -a':
+            help_all();
+            break;
 
         case 'about':
             about();
