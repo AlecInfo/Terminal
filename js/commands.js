@@ -1,3 +1,19 @@
+
+// const commandss = [
+//     {name: 'help', action: help()},
+//     {name: 'help', action: help()},
+//     {name: 'help', action: help()},
+//     {name: 'help', action: help()},
+//     {name: 'help', action: help()},
+// ];
+
+// const commandss = [
+//     {name: 'help', action: help},
+//     {name: 'help -a', action: help_all},
+//     {name: "about", action: about},
+//     {name: "cd ", action: cd("test")},
+// ];
+
 function help() {
     text = [
         'about...............Who is Piette Alec',
@@ -70,3 +86,4 @@ function social(){
 function sendMail() {
     window.open('https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVhQxQQWVgjTpKtWzVrZgkgKDcwTWKjHSXlkpcglXwqLPRnQkrsZdttSzVbNPQChLjFg');
 }
+
