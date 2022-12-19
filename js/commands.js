@@ -14,6 +14,15 @@
 //     {name: "cd ", action: cd("test")},
 // ];
 
+function error(){
+    text = [
+        '<span class="error">Command not found</span>'
+    ];
+
+    write(text);
+}
+
+
 function help() {
     text = [
         'about...............Who is Piette Alec',

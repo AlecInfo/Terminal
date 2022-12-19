@@ -27,6 +27,9 @@ $(function() {
 });
 
 function commands(cmd) {   
+    if (cmd.substring(0, 3) === 'cd ') {
+        cd(cmd);
+    }
     switch (cmd) {
         case 'help':
             help();
@@ -51,9 +54,10 @@ function commands(cmd) {
         case 'social':
             social();
             break;
-    }
-    if (cmd.substring(0, 3) === 'cd ') {
-        cd(cmd);
+        
+        default:
+            error();
+            break;
     }
 }
 

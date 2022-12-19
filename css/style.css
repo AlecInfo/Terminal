@@ -7,7 +7,8 @@
   --secondary: #f8d568;
   --user: #81F797;
   --location: #6882F7;
-  --link: #81D4F7;
+  --link: #81D4F7;  
+  --error: #F75C77;
 }
 
 
@@ -124,6 +125,9 @@ body {
   } 
   a {
     color: var(--link);
+  }
+  .error{
+    color: var(--error);
   }
   #input{
     width: 0;
