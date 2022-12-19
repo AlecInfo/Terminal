@@ -40,6 +40,7 @@ function help_all(){
         'about...............Who is Piette Alec',
         'cd (path)...........Change path just visual',
         'clear...............Clear the terminal',
+        'games...............Display the list of retro games',
         'help................Displays the list of commands',
         'help -a.............Displays the all list of commands',
         'repo................Go see the code',
@@ -96,3 +97,20 @@ function sendMail() {
     window.open('https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVhQxQQWVgjTpKtWzVrZgkgKDcwTWKjHSXlkpcglXwqLPRnQkrsZdttSzVbNPQChLjFg');
 }
 
+function games(){
+    text = [
+        'Liste des meilleurs jeux rétro :',
+        '<a onclick="play_snake()">Snake</a>',
+        '<a onclick="play_pong()">Pong</a>',
+        '<a onclick="play_tetris()">Tetris</a>',
+        '<a onclick="play_mario()">Super Mario Bros</a>',
+        '<a onclick="play_zelda()">The Legend of Zelda</a>',
+        '<a onclick="play_pacman()">Pac-Man</a>',
+        '<a onclick="play_donkeykong()">Donkey Kong</a>',
+        '<a onclick="play_asteroids()">Asteroids</a>',
+        '<a onclick="play_spaceinvaders()">Space Invaders</a>',
+        '<a onclick="play_defender()">Defender</a>'
+    ];
+  
+    write(text);
+  }
