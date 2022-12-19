@@ -1,6 +1,10 @@
 function play_snake() {
-    // code pour lancer le jeu Snake
-    write('Snake');
+    text = [
+        'Snake',
+        '<canvas id="canvas" width="400" height="400"></canvas>',
+    ];
+
+    write(text);
   }
   
   function play_pong() {

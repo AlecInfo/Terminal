@@ -100,7 +100,7 @@ function sendMail() {
 function games(){
     text = [
         'Liste des meilleurs jeux rétro :',
-        '<a onclick="play_snake()">Snake</a>',
+        '<a onclick="snake()">Snake</a>',
         '<a onclick="play_pong()">Pong</a>',
         '<a onclick="play_tetris()">Tetris</a>',
         '<a onclick="play_mario()">Super Mario Bros</a>',
