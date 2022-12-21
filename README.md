@@ -26,6 +26,10 @@ Cet projet a été fait avec html, css, javascript.
 1. Entrer la commande `help` pour commencer et voir les différents comamndes disponible
 2. Et ensuite amusez vous bien
 
+## License
+
+[MIT](https://github.com/AlecInfo/Terminal/blob/main/LICENSE)
+
 <p align="right">(<a href="#readme-top">Retour au top</a>)</p>
 
 ---
