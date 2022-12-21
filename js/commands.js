@@ -99,7 +99,7 @@ function sendMail() {
 
 function games(){
     text = [
-        'Liste des meilleurs jeux rétro :',
+        'List of the best retro games :',
         '<a onclick="play_snake()">Snake</a>',
         '<a onclick="play_pong()">Pong</a>',
         '<a onclick="play_tetris()">Tetris</a>',
