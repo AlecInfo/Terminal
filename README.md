@@ -23,8 +23,9 @@ Cet projet a été fait avec html, css, javascript.
 
 ## Expérimenter
 
-1. Entrer la commande `help` pour commencer et voir les différents comamndes disponible
-2. Et ensuite amusez vous bien
+1. Entrer la commande `help` pour commencer et voir les différents commandes disponible
+2. Pour en savoir plus sur moi entrer la commande `about` 
+3. Et ensuite amusez vous bien
 
 ## License
 
